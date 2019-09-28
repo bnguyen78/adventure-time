@@ -6,8 +6,18 @@
     margin-top: 400px;
     color: white;
 }
-body{
-    background-image: url(./images/photo-1569432612267-72ad7e2e4e8e.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 200%;
+
+#logo {
+  width: 100px;
+  height: auto;
+}
+
+.top-bar {
+  height: 10%;
+}
+
+body {
+  background-image: url(./images/photo-1569432612267-72ad7e2e4e8e.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 200%;
 }
