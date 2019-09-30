@@ -12,12 +12,55 @@
   height: auto;
 }
 
+.c-white {
+  color: white;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.bg-blue {
+  background-color: blue;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.bg-orange {
+  background-color: orange;
+}
+
+.bg-purple {
+  background-color: purple;
+}
+
+.tile {
+  height: 25vh;
+  display: flex;
+  vertical-align: 50%;
+}
+
 .top-bar {
   height: 10%;
+  margin-bottom: 20px;
 }
 
 body {
   background-image: url(./images/photo-1569432612267-72ad7e2e4e8e.jpg);
   background-repeat: no-repeat;
   background-size: 100% 200%;
+}
+
+@media only screen and (max-width: 39.9375em) {
+
+  .tile {
+    height: 18vh;
+  }  
+
 }

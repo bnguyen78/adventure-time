@@ -12,32 +12,66 @@
 </head>
 
 <body>
-  <div>
-    <!-- <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
-      <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
-      <div class="title-bar-title">Adventure Time</div>
-    </div> -->
+  <div class="top-bar" id="responsive-menu">
+    <div class="top-bar-left">
+      <ul class="title-area" style="list-style-type:none" data-responsive-menu="drilldown medium-dropdown">
+        <li id="logo">
+          <a href="#"><img src="./assets/Logo.png" alt="logo"></a>
+        </li>
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="favorites-area" style="list-style-type:none">
+        <li>
+          <a href="#">Favorites</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
-    <div class="top-bar" id="responsive-menu">
-      <div class="top-bar-left">
-        <ul class="title-area" style="list-style-type:none">
-          <li id="logo">
-            <a href="#"><img src="./assets/Logo.png" alt="logo"></a>
-          </li>
-        </ul>
+  <div class="grid-container">
+    <div class="grid-y grid-margin-y">
+      <div class="cell">
+        <div class="grid-x grid-margin-x">
+          <div class="cell small-6 tile bg-purple align-center align-middle">
+            <b class="text-center h1 c-white">Restaurants</b>
+          </div>
+          <div class="cell small-6 tile bg-green align-center align-middle">
+            <b class="text-center h1 c-white">Weather</b>
+          </div>
+        </div>
       </div>
-      <div class="top-bar-right">
-        <ul class="favorites-area" style="list-style-type:none">
-          <li>
-            <a href="#">Favorites</a>
-          </li>
-        </ul>
+      <div class="cell">
+        <div class="grid-x">
+          <div class="cell tile bg-orange align-center align-middle">
+            <b class="text-center h1 c-white">Entertainment</b>
+          </div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="grid-x grid-margin-x">
+          <div class="cell small-6 tile bg-red align-center align-middle">
+            <b class="text-center h1 c-white">Events</b>
+          </div>
+          <div class="cell small-6 tile bg-white align-center align-middle">
+            <b class="text-center h1">Historical Locations</b>
+          </div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="grid-x">
+          <div class="cell tile bg-blue align-center align-middle">
+            <b class="text-center h1 c-white">Sporting Events</b>
+          </div>
+        </div>
       </div>
     </div>
+
   </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="./assets/what-input.js"></script>
   <script src="./assets/foundation.min.js"></script>
   <script src="./assets/script.js"></script>
 </body>
