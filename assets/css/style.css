@@ -1,3 +1,11 @@
+body{
+  background-image: url(../images/Background-3.jpg);
+  background-repeat: no-repeat;
+  z-index: -1;
+image-rendering: -webkit-optimize-contrast;
+}
+/* Hello */
+
 #inputLocation {
     text-align: center;
     width: 250px;
@@ -49,12 +57,6 @@
 .top-bar {
   height: 10%;
   margin-bottom: 20px;
-}
-
-body {
-  background-image: url(../images/photo-1569432612267-72ad7e2e4e8e.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 200%;
 }
 
 @media only screen and (max-width: 39.9375em) {
