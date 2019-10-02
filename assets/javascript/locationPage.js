@@ -1,5 +1,11 @@
 document.getElementById('button').addEventListener('click', e => {
   e.preventDefault()
   console.log(document.getElementById('newLocation').value)
- window.location.href = './budget.html' 
+  let at_ls = JSON.parse(localStorage.getItem('adventureTime'))
+  localStorage.setItem('adventureTime', JSON.stringify({
+    location: document.getElementById('newLocation').value,
+    budget: '',
+    theme: ''
+  }))
+  window.location.href = './budget.html'
 })
