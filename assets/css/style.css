@@ -1,7 +1,7 @@
-body {
+body{
   background-image: url(../images/Background-3.jpg);
   background-repeat: no-repeat;
-
+  z-index: -1;
 image-rendering: -webkit-optimize-contrast;
 }
 
