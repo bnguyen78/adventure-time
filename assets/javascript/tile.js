@@ -1,6 +1,6 @@
 document.querySelector('body').addEventListener('click', e => {
   if (e.target.className.includes('tile')) {
-    let at_ls = parse(localStorage.getItem('adventureTime'))
+    let at_ls = JSON.parse(localStorage.getItem('adventureTime'))
     localStorage.setItem('adventureTime', JSON.stringify({
       location: at_ls.location,
       budget: at_ls.budget,
