@@ -47,6 +47,14 @@ label {
   z-index: 1;
 }
 
+#list {
+  margin: 0;
+}
+
+#search-input {
+  margin: 0;
+}
+
 .c-white {
   color: white;
 }
