@@ -12,14 +12,25 @@
 </head>
 
 <body>
+    
+        <div class="budget" id="budgetID">
+            <form >
+                <label>Hotel Budget</label>
+                <input class="input" name="hotelBudget" id="budgetHotel" type="text" placeholder="Budget for Hotel">
 
-    <div id="inputLocation">
-        <form>
-            <input id="newBudget" type="text" placeholder="Budget" value="">
-            <button id="budgetButton">Click me!</button>
-        </form>
-    </div>
-
+                <label>Average USD/meal:</label>
+                <input class="input" name="restaurantBudget" id="budgetRestaurant" type="text" placeholder="Budget for Restaurants"> 
+                
+                <label>Activities Budget</label>
+                <input class="input" name="activitiesBudget" id="budgetActivities" type="text" placeholder="Budget for Activities">
+                
+                <label>Night Club Budget:</label>
+                <input class="input" name="nightClubBudget" id="budgetNightClub" type="text" placeholder="Budget for Clubbing">
+            </form>
+            <a class="button success" id="budgetButton" href="#">SPEND MONEY</a>
+            </div>
+                
+    
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="./assets/javascript/what-input.js"></script>
