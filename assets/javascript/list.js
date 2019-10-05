@@ -1,3 +1,10 @@
+// localStorage.setItem('adventureTime', JSON.stringify({
+//   location: 'New York',
+//   budget: '10000',
+//   theme: 'restaurant'
+// }))
+
+
 const api_key = 'AIzaSyD_d7IeC3P6-D6zxivF0UKXFaDzcUSpLzw'
 
 let list = []
@@ -26,32 +33,42 @@ fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://maps.goo
           .then(data => {
             const places = JSON.parse(data.contents).results
             places.forEach((place, i) => {
+              console.log(place)
+              let price = ""
+              for (let i = 0; i < place.price_level; i++) {
+                price += '$'
+              }
               document.querySelector('#list').innerHTML += `
                 <li class="accordion-item" data-accordion-item>
                   <a href="#" class="accordion-title">${place.name}</a>
                   <div class="accordion-content" data-tab-content>
-                    <p>Panel 1. Lorem ipsum dolor</p>
-                    <a href="#">Nowhere to Go</a>
+                    <p><b>Address: </b>${place.formatted_address}</p>
+                    <p><b>Open: </b>${place.opening_hours.open_now ? 'Yes' : 'No'}</p>
+                    <p><b>Price: </b>${price}</p>
+                    <p><b>Rating: </b>${place.rating}</p>
                   </div>
                 </li>`
               if (i === 19) {
-                console.log(document.querySelector('#list').childNodes)
+                // console.log(document.querySelector('#list').childNodes)
               }
             })
+
+            let accordion = new Foundation.Accordion($('.accordion'))
           })
+          .catch(e => console.error(e))
       })
       .catch(e => console.error(e))
   })
   .catch(e => console.error(e))
 
 
-  document.querySelector('#search-btn').addEventListener('click', e => {
-    const search = document.querySelector('#search-input').value
-    document.querySelector('#list').childNodes.forEach(x => {
-      if (x.tagName === 'LI') {
-        if (!x.childNodes[1].innerText.includes(search)) {
-          x.style.display = 'none'
-        }
+document.querySelector('#search-btn').addEventListener('click', e => {
+  const search = document.querySelector('#search-input').value
+  document.querySelector('#list').children.forEach(x => {
+    if (x.tagName === 'LI') {
+      if (!x.childNodes[1].innerText.includes(search)) {
+        x.style.display = 'none'
       }
-    })
+    }
   })
+})
