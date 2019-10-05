@@ -9,17 +9,19 @@
   <link rel="stylesheet" href="./assets/css/foundation.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
+  
   <title>Adventure Time</title>
 </head>
 
 <body>
+    
 
-  <!-- NavBar -->
+  
   <div class="top-bar" id="responsive-menu">
     <div class="top-bar-left">
       <ul class="title-area" style="list-style-type:none" data-responsive-menu="drilldown medium-dropdown">
         <li id="logo">
-          <a href="#"><img src="./assets/images/Logo.png" alt="logo"></a>
+          <a href="#"><img src="assets/images/Logo.png" alt="logo"></a>
         </li>
       </ul>
     </div>
@@ -31,40 +33,29 @@
       </ul>
     </div>
   </div>
-
+  
   <div class="grid-container">
     <div class="grid-y list-container">
       <div class="row">
-        <div id="search-input" class="input-group">
+        <div class="input-group">
           <span class="input-group-label"><i class="fas fa-search"></i></span>
-          <input class="input-group-field" type="text">
+          <input id="search-input" class="input-group-field" type="text">
           <div class="input-group-button">
-            <input type="submit" class="button" value="Submit">
+            <input id="search-btn" type="submit" class="button" value="Search">
           </div>
         </div>
       </div>
       <div class="row">
-        <ul id="list" style="list-style-type:none;">
-          <li><a href="#">Test</a></li>
-          <li><a href="#">Test</a></li>
-          <li><a href="#">Test</a></li>
-          <li><a href="#">Test</a></li>
-          <li><a href="#">Test</a></li>
-          <li><a href="#">Test</a></li>
-          <li><a href="#">Test</a></li>
-          <li><a href="#">Test</a></li>
-          <li><a href="#">Test</a></li>
-          <li><a href="#">Test</a></li>
+        <ul id="list" class="accordion" style="list-style-type:none;" data-allow-all-closed="true">
         </ul>
       </div>
     </div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="./assets/javascript/what-input.js"></script>
   <script src="./assets/javascript/foundation.min.js"></script>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  
   <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js"></script>
   <script src="./assets/javascript/script.js"></script>
