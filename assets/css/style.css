@@ -49,6 +49,9 @@ label {
 
 #list {
   margin: 0;
+  height: 75vh;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 #search-input {
