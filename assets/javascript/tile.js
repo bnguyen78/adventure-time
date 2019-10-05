@@ -7,5 +7,6 @@ document.querySelector('body').addEventListener('click', e => {
       theme: e.target.dataset.theme
     }))
     window.location.href = './list.html'
+    
   }
 })
