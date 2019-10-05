@@ -3,7 +3,10 @@ document.querySelector('body').addEventListener('click', e => {
     let at_ls = JSON.parse(localStorage.getItem('adventureTime'))
     localStorage.setItem('adventureTime', JSON.stringify({
       location: at_ls.location,
-      budget: at_ls.budget,
+      hotelBudget: at_ls.hotelBudget,
+      restaurantBudget: at_ls.restaurantBudget,
+      activitiesBudget: at_ls.activitiesBudget,
+      nightClubBudget: at_ls.nightClubBudget,
       theme: e.target.dataset.theme
     }))
     window.location.href = './list.html'

@@ -1,14 +1,22 @@
-// localStorage.setItem('adventureTime', JSON.stringify({
-//   location: 'New York',
-//   budget: '10000',
-//   theme: 'restaurant'
-// }))
-
-
 const api_key = 'AIzaSyD_d7IeC3P6-D6zxivF0UKXFaDzcUSpLzw'
 
 let list = []
 const tripInfo = JSON.parse(localStorage.getItem('adventureTime'))
+switch (tripInfo.theme) {
+  case 'Weather':
+    break
+  case 'Restaurants':
+    break
+  case 'Historical Locations':
+    break
+  case 'Entertainment':
+    break
+  case 'Night Clubs':
+    break
+  case 'Sports':
+    break
+}
+
 
 document.querySelector('#list').innerHTML = ''
 
