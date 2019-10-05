@@ -60,7 +60,8 @@ label {
 }
 
 .bg-nightclub {
-  background-image: url('../images/nightclubs.jpg');
+  background: url('../images/nightclubs.jpg') no-repeat center 20%;
+  background-size: cover;
 }
 
 .bg-sports {
@@ -81,18 +82,21 @@ label {
 
   background-color: #ffffff;
   /* border: 1px solid black; */
-  opacity: 0.6;
+  opacity: 0.7;
   padding: 10px;
   margin: 10px;
+  
 
 }
 
 .bg-weather {
-  background-image: url('../images/weather.png');
+  background: url('../images/weather.png') center;
+  
 }
 
 .bg-entertainment {
-  background-image: url('../images/entertainment.jpg');
+  background: url('../images/entertainment.jpg') no-repeat center;
+  background-size: cover;
 }
 
 .bg-restaurant {
