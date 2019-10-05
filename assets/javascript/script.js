@@ -11,3 +11,13 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig)
 const db = firebase.firestore()
+
+db.collection("Favorites").doc({
+
+})
+  .then(function () {
+    ;
+  })
+  .catch(function (error) {
+
+  });
