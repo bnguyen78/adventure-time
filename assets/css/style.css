@@ -49,9 +49,16 @@ label {
 
 #list {
   margin: 0;
+  height: 75vh;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 #search-input {
+  margin: 0;
+}
+
+.input-group {
   margin: 0;
 }
 
