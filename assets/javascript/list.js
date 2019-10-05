@@ -3,17 +3,17 @@ const api_key = 'AIzaSyD_d7IeC3P6-D6zxivF0UKXFaDzcUSpLzw'
 let list = []
 const tripInfo = JSON.parse(localStorage.getItem('adventureTime'))
 switch (tripInfo.theme) {
-  case 'Weather':
-    break
   case 'Restaurants':
     break
-  case 'Historical Locations':
+  case 'Amusement Park':
     break
-  case 'Entertainment':
+  case 'Movie Theater':
     break
   case 'Night Clubs':
     break
   case 'Sports':
+    break
+  default:
     break
 }
 
@@ -46,16 +46,20 @@ fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://maps.goo
               for (let i = 0; i < place.price_level; i++) {
                 price += '$'
               }
+              if (!place.price_level) {
+                price = 'No price information available'
+              }
               document.querySelector('#list').innerHTML += `
                 <li class="accordion-item" data-accordion-item>
                   <a href="#" class="accordion-title">${place.name}</a>
                   <div class="accordion-content" data-tab-content>
                     <p><b>Address: </b>${place.formatted_address}</p>
-                    <p><b>Open: </b>${place.opening_hours.open_now ? 'Yes' : 'No'}</p>
                     <p><b>Price: </b>${price}</p>
+                    <p><b>Open: </b>${place.opening_hours ? (place.opening_hours.open_now ? 'Yes' : 'No') : 'Hours not available'}</p>
                     <p><b>Rating: </b>${place.rating}</p>
                   </div>
                 </li>`
+                // <p><b>Open: </b>${place.opening_hours.open_now ? 'Yes' : 'No'}</p>
               if (i === 19) {
                 // console.log(document.querySelector('#list').childNodes)
               }
