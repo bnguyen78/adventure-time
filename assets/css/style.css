@@ -24,6 +24,12 @@ body {
   background-color: rgba(255, 255, 255, .5)
 }
 
+#newLocation{
+  margin-top: 325px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #budgetButton {
   margin-left: 75px;
   margin-top: 10px;
