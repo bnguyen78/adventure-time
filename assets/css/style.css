@@ -15,7 +15,8 @@ body {
   width: 200px;
   margin-left: 50px;
 }
-#budgetID{
+
+#budgetID {
   height: 450px;
   width: 300px;
   margin-top: 150px;
@@ -24,7 +25,7 @@ body {
   background-color: rgba(255, 255, 255, .5)
 }
 
-#newLocation{
+#newLocation {
   margin-top: 325px;
   margin-left: auto;
   margin-right: auto;
@@ -78,7 +79,7 @@ label {
 }
 
 .bg-sports {
-  background: url('../images/sports1.jpg') no-repeat center ;
+  background: url('../images/sports1.jpg') no-repeat center;
   /* background-repeat: no-repeat; */
   background-size: cover;
   /* background-size: 100% 100% */
@@ -89,22 +90,18 @@ label {
   /* background-repeat: no-repeat; */
   background-size: cover;
   /* background-size: 100% 100% */
-
 }
-.historyglass{
 
+.historyglass {
   background-color: #ffffff;
   /* border: 1px solid black; */
   opacity: 0.7;
   padding: 10px;
   margin: 10px;
-  
-
 }
 
 .bg-weather {
   background: url('../images/weather.png') center;
-  
 }
 
 .bg-entertainment {
@@ -125,6 +122,10 @@ label {
 .top-bar {
   height: 10%;
   margin-bottom: 20px;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+  opacity: 0.6;
 }
 
 .list-container {
@@ -134,18 +135,27 @@ label {
 }
 
 #list li a {
-  border: 1px solid #ddd; /* Add a border to all links */
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6; /* Grey background color */
-  padding: 12px; /* Add some padding */
-  text-decoration: none; /* Remove default text underline */
-  font-size: 18px; /* Increase the font-size */
-  color: black; /* Add a black text color */
-  display: block; /* Make it into a block element to fill the whole list */
+  border: 1px solid #ddd;
+  /* Add a border to all links */
+  margin-top: -1px;
+  /* Prevent double borders */
+  background-color: #f6f6f6;
+  /* Grey background color */
+  padding: 12px;
+  /* Add some padding */
+  text-decoration: none;
+  /* Remove default text underline */
+  font-size: 18px;
+  /* Increase the font-size */
+  color: black;
+  /* Add a black text color */
+  display: block;
+  /* Make it into a block element to fill the whole list */
 }
 
 #list li a:hover:not(.header) {
-  background-color: #eee; /* Add a hover effect to all links, except for headers */
+  background-color: #eee;
+  /* Add a hover effect to all links, except for headers */
 }
 
 @media only screen and (max-width: 39.9375em) {

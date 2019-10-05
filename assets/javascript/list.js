@@ -76,10 +76,12 @@ fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://maps.goo
 
 document.querySelector('#search-btn').addEventListener('click', e => {
   const search = document.querySelector('#search-input').value
-  document.querySelector('#list').children.forEach(x => {
+  document.querySelector('#list').childNodes.forEach(x => {
     if (x.tagName === 'LI') {
       if (!x.childNodes[1].innerText.includes(search)) {
         x.style.display = 'none'
+      } else {
+        x.style.display = 'list-item'
       }
     }
   })
