@@ -62,28 +62,44 @@ label {
   color: white;
 }
 
-.bg-red {
-  background-color: red;
+.bg-nightclub {
+  background-image: url('../images/nightclubs.jpg');
 }
 
-.bg-blue {
-  background-color: blue;
+.bg-sports {
+  background: url('../images/sports1.jpg') no-repeat center ;
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  /* background-size: 100% 100% */
 }
 
-.bg-white {
-  background-color: white;
+.bg-history {
+  background: url('../images/history.jpg') no-repeat center 20%;
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  /* background-size: 100% 100% */
+
+}
+.historyglass{
+
+  background-color: #ffffff;
+  /* border: 1px solid black; */
+  opacity: 0.6;
+  padding: 10px;
+  margin: 10px;
+
 }
 
-.bg-green {
-  background-color: green;
+.bg-weather {
+  background-image: url('../images/weather.png');
 }
 
-.bg-orange {
-  background-color: orange;
+.bg-entertainment {
+  background-image: url('../images/entertainment.jpg');
 }
 
-.bg-purple {
-  background-color: purple;
+.bg-restaurant {
+  background-image: url('../images/restaurant.jpg');
 }
 
 .tile {
