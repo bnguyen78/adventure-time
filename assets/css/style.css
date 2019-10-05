@@ -58,6 +58,46 @@ label {
 .c-white {
   color: white;
 }
+div{
+  position:absolute;
+  width:20px;
+  height:20px;
+}
+#box1
+{
+ border:1px solid red;
+ right:50%;
+}   
+#box2
+{
+  border:1px solid purple;
+  top:30%;
+  right:10%;
+}
+#box3
+{
+  border:1px solid orange;
+  top:30%;
+  left:10%;
+}
+#box4
+{
+  border:1px solid red;
+  top:60%;
+  right:10%;
+}
+#box5
+{
+  border: 1px solid green;
+  top:60%;
+  left:10%
+}
+#box6
+{
+  border:1px solid red;
+  top:90%;
+  right:50%;
+}
 
 .bg-nightclub {
   background: url('../images/nightclubs.jpg') no-repeat center 20%;
@@ -72,21 +112,21 @@ label {
 }
 
 .bg-history {
-  background: url('../images/history.jpg') no-repeat center 20%;
-  /* background-repeat: no-repeat; */
-  background-size: cover;
-  /* background-size: 100% 100% */
+  background-image: url('../images/history.jpg');
+  background-position: 60% ;
+  background-size: 1080px auto;
+  padding: 70px 90px 120px 90px;
 
 }
-.historyglass{
-
-  background-color: #ffffff;
-  /* border: 1px solid black; */
-  opacity: 0.7;
-  padding: 10px;
-  margin: 10px;
+.historyinherit{
+  background: inherit;
+  position: absolute;
+  box-shadow: 0 0 32px rgba(0,0,0,0.5)
   
-
+  
+}
+.tile-text .text-center .h1{
+  padding: 16px;
 }
 
 .bg-weather {
@@ -95,8 +135,8 @@ label {
 }
 
 .bg-entertainment {
-  background: url('../images/entertainment.jpg') no-repeat center;
-  background-size: cover;
+  background-image: url('../images/entertainment.jpg');
+
 }
 
 .bg-restaurant {
@@ -135,8 +175,11 @@ label {
   background-color: #eee; /* Add a hover effect to all links, except for headers */
 }
 
+
 @media only screen and (max-width: 39.9375em) {
   .tile {
     height: 18vh;
   }
 }
+
+
