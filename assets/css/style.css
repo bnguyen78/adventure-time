@@ -7,13 +7,31 @@ body {
 
 /* Hello */
 
-#inputLocation {
+.input {
   text-align: center;
-  width: 250px;
-  margin-right: auto;
+  color: black;
+  float: inline-end;
+  margin-top: 15px;
+  width: 200px;
+  margin-left: 50px;
+}
+#budgetID{
+  height: 450px;
+  width: 300px;
+  margin-top: 150px;
   margin-left: auto;
-  margin-top: 400px;
-  color: white;
+  margin-right: auto;
+  background-color: rgba(255, 255, 255, .5)
+}
+
+#budgetButton {
+  margin-left: 75px;
+  margin-top: 10px;
+}
+
+label {
+  color: red;
+  font-weight: bold;
 }
 
 #logo {
@@ -29,32 +47,56 @@ body {
   z-index: 1;
 }
 
+#list {
+  margin: 0;
+}
+
+#search-input {
+  margin: 0;
+}
+
 .c-white {
   color: white;
 }
 
-.bg-red {
-  background-color: red;
+.bg-nightclub {
+  background-image: url('../images/nightclubs.jpg');
 }
 
-.bg-blue {
-  background-color: blue;
+.bg-sports {
+  background: url('../images/sports1.jpg') no-repeat center ;
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  /* background-size: 100% 100% */
 }
 
-.bg-white {
-  background-color: white;
+.bg-history {
+  background: url('../images/history.jpg') no-repeat center 20%;
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  /* background-size: 100% 100% */
+
+}
+.historyglass{
+
+  background-color: #ffffff;
+  /* border: 1px solid black; */
+  opacity: 0.6;
+  padding: 10px;
+  margin: 10px;
+
 }
 
-.bg-green {
-  background-color: green;
+.bg-weather {
+  background-image: url('../images/weather.png');
 }
 
-.bg-orange {
-  background-color: orange;
+.bg-entertainment {
+  background-image: url('../images/entertainment.jpg');
 }
 
-.bg-purple {
-  background-color: purple;
+.bg-restaurant {
+  background-image: url('../images/restaurant.jpg');
 }
 
 .tile {
