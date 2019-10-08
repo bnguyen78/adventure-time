@@ -5,7 +5,10 @@ body {
   image-rendering: -webkit-optimize-contrast;
 }
 
-/* Hello */
+label {
+  color: red;
+  font-weight: bold;
+}
 
 .input {
   text-align: center;
@@ -14,55 +17,6 @@ body {
   margin-top: 15px;
   width: 200px;
   margin-left: 50px;
-}
-
-#budgetID {
-  height: 450px;
-  width: 300px;
-  margin-top: 150px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: rgba(255, 255, 255, .5)
-}
-
-#newLocation {
-  margin-top: 325px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#budgetButton {
-  margin-left: 75px;
-  margin-top: 10px;
-}
-
-label {
-  color: red;
-  font-weight: bold;
-}
-
-#logo {
-  width: 100px;
-  height: auto;
-}
-
-#img-rest {
-  background-image: url(../images/Restaurant.png);
-  position: relative;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-}
-
-#list {
-  margin: 0;
-  height: 75vh;
-  overflow: hidden;
-  overflow-y: scroll;
-}
-
-#search-input {
-  margin: 0;
 }
 
 .input-group {
@@ -132,6 +86,56 @@ label {
   border: 2px solid white;
   border-radius: 2px;
   background-color: rgba(255, 255, 255, 0.8);
+}
+
+#auth-container {
+  border: 2px solid white;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#budgetID {
+  height: 450px;
+  width: 300px;
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255, 255, 255, .5)
+}
+
+#newLocation {
+  margin-top: 325px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#budgetButton {
+  margin-left: 75px;
+  margin-top: 10px;
+}
+
+#logo {
+  width: 100px;
+  height: auto;
+}
+
+#img-rest {
+  background-image: url(../images/Restaurant.png);
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+#list {
+  margin: 0;
+  height: 75vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+#search-input {
+  margin: 0;
 }
 
 #list li a {

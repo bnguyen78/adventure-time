@@ -1,3 +1,5 @@
+document.querySelector('#user-name').innerHTML = displayName ? `<b>${displayName}</b>` : ''
+
 document.getElementById('budgetButton').addEventListener('click', e => {
   e.preventDefault()
   console.log(document.getElementById('budgetHotel').value)

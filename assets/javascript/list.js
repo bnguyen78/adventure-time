@@ -4,6 +4,7 @@ let list, currentToken, budget, timeout
 const tripInfo = JSON.parse(localStorage.getItem('adventureTime'))
 
 const setupPage = _ => {
+  document.querySelector('#user-name').innerHTML = displayName ? `<b>${displayName}</b>` : ''
   timeout = false
   list = []
   switch (tripInfo.theme) {

@@ -12,4 +12,28 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig)
 const db = firebase.firestore()
 
+let displayName
+let uid
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    displayName = user.displayName;
+    let email = user.email;
+    let emailVerified = user.emailVerified;
+    let photoURL = user.photoURL;
+    let isAnonymous = user.isAnonymous;
+    let uid = user.uid;
+    let providerData = user.providerData;
+    // ...
+    console.log(`uid = ${uid}`)
+    document.querySelector('#user-name').innerHTML = `<b>${displayName}</b>`
+  } else {
+    // User is signed out.
+    // ...
+  }
+})
+
+document.querySelector('#user-name').innerHTML = displayName ? `<b>${displayName}</b>` : ''
+
 db.collection("favorites")

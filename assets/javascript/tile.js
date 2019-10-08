@@ -1,3 +1,5 @@
+document.querySelector('#user-name').innerHTML = displayName ? `<b>${displayName}</b>` : ''
+
 document.querySelector('body').addEventListener('click', e => {
   if (e.target.className.includes('tile')) {
     let at_ls = JSON.parse(localStorage.getItem('adventureTime'))
