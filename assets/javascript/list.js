@@ -4,7 +4,6 @@ let list, currentToken, budget, timeout
 const tripInfo = JSON.parse(localStorage.getItem('adventureTime'))
 
 const setupPage = _ => {
-  document.querySelector('#user-name').innerHTML = displayName ? `<b>${displayName}</b>` : ''
   timeout = false
   list = []
   switch (tripInfo.theme) {
@@ -48,7 +47,7 @@ const addListItems = d => {
                     <p><b>Price: </b>${price}</p>
                     <p><b>Open: </b>${place.opening_hours ? (place.opening_hours.open_now ? 'Yes' : 'No') : 'Hours not available'}</p>
                     <p><b>Rating: </b>${place.rating}</p>
-                    <button type="button" class="success button fav-btn">Add to Favorites</button>
+                    <button type="button" class="success button fav-btn" data-placeid="${place.place_id}" data-name="${place.name}" data-address="${place.formatted_address}" data-price="${price}" data-rating="${place.rating}">Add to Favorites</button>
                   </div>
                 </li>`
   })
@@ -100,7 +99,6 @@ document.querySelector('#search-btn').addEventListener('click', e => {
 
 document.querySelector('#list').addEventListener('scroll', e => {
   if (document.querySelector('.last-one').getBoundingClientRect().top < window.innerHeight && !timeout) {
-    console.log('adding more')
     timeout = true
     setTimeout(_ => timeout = false, 600)
     fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://maps.googleapis.com/maps/api/place/textsearch/json?key=${api_key}&query=${tripInfo.theme}&type=${tripInfo.theme}&radius=8046.72&location=${location.lat},${location.lng}&pagetoken =${currentToken}`)}`)
@@ -110,6 +108,24 @@ document.querySelector('#list').addEventListener('scroll', e => {
       })
       .then(data => addListItems(data))
       .catch(e => console.error(e))
+  }
+})
+
+document.querySelector('body').addEventListener('click', e => {
+  if (e.target.className.includes('fav-btn')) {
+    const { placeid, name, address, price, rating } = e.target.dataset
+    db.collection('users')
+      .doc(`${uid}`)
+      .collection('favorites')
+      .doc(`${placeid}`)
+      .set({
+        place_id: placeid,
+        name: name,
+        address: address,
+        price: price,
+        rating: rating
+      })
+
   }
 })
 

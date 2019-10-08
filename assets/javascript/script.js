@@ -19,11 +19,11 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
     displayName = user.displayName;
+    uid = user.uid;
     let email = user.email;
     let emailVerified = user.emailVerified;
     let photoURL = user.photoURL;
     let isAnonymous = user.isAnonymous;
-    let uid = user.uid;
     let providerData = user.providerData;
     // ...
     console.log(`uid = ${uid}`)
@@ -31,6 +31,15 @@ firebase.auth().onAuthStateChanged(function(user) {
   } else {
     // User is signed out.
     // ...
+  }
+})
+
+document.querySelector('body').addEventListener('click', e => {
+  if (e.target.id === 'sign-out') {
+    firebase.auth().signOut()
+    displayName = ''
+    uid = ''
+    window.location.href = '../../index.html'
   }
 })
 

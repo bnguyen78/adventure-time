@@ -22,9 +22,10 @@
       </ul>
     </div>
     <div class="top-bar-right">
-      <ul class="favorites-area" style="list-style-type:none">
+      <ul class="menu favorites-area" style="list-style-type:none">
         <li id="user-name"></li>
-        <li><a href="#">Favorites</a></li>
+        <li><a id="favorites" href="#" class="button">Favorites</a></li>
+        <li><a id="sign-out" href="#" class="alert button">Sign Out</a></li>
       </ul>
     </div>
   </div>
@@ -37,12 +38,12 @@
         <div class="grid-x grid-margin-x">
           <div class="cell small-6 tile bg-restaurant align-center align-middle" data-theme="restaurant">
             <div class="img"></div>
-            <div class="tile-div historyglass">
+            <div class="tile-div historyglass" data-theme="restaurant">
               <b class="tile-text text-center h1 c-black" data-theme="restaurant">Restaurants</b>
             </div>
           </div>
           <div class="cell small-6 tile bg-weather align-center align-middle" data-theme="weather">
-            <div class="tile-div historyglass">
+            <div class="tile-div historyglass" data-theme="weather">
               <b class="tile-text text-center h1 c-black" data-theme="weather">Weather</b>
             </div>
           </div>
@@ -51,7 +52,7 @@
       <div class="cell entertainment">
         <div class="grid-x">
           <div class="cell tile bg-entertainment align-center align-middle" data-theme="movie_theater">
-            <div class="tile-div historyglass">
+            <div class="tile-div historyglass" data-theme="movie_theater">
               <b class="tile-text text-center h1 c-black" data-theme="movie_theater">Entertainment</b>
             </div>
           </div>
@@ -61,13 +62,13 @@
         <div class="grid-x grid-margin-x">
 
           <div class="cell small-6 tile bg-nightclub align-center align-middle" data-theme="night_club">
-            <div class="tile-div historyglass">
+            <div class="tile-div historyglass" data-theme="night_club">
               <b class="tile-text text-center h1 c-black" data-theme="night_club">Nightclubs</b>
             </div>
           </div>
 
           <div class="cell small-6 tile bg-history align-center align-middle" data-theme="amusement_park">
-            <div class="tile-div historyglass">
+            <div class="tile-div historyglass" data-theme="amusement_park">
               <b class="tile-text text-center h1" data-theme="amusement_park">Historical Locations</b>
             </div>
           </div>
@@ -76,7 +77,7 @@
       <div class="cell">
         <div class="grid-x">
           <div class="cell tile bg-sports align-center align-middle" data-theme="stadium">
-            <div class="tile-div historyglass">
+            <div class="tile-div historyglass" data-theme="stadium">
               <b class="tile-text text-center h1 c-black" data-theme="stadium">Sports</b>
             </div>
           </div>
