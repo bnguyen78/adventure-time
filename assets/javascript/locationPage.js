@@ -23,7 +23,7 @@ document.getElementById('button').addEventListener('click', e => {
             nightClub: '',
             theme: ''
           }))
-          // window.location.href = './budget.html'
+          window.location.href = './budget.html'
         })
         .catch(e => console.error(e))
     })

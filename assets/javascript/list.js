@@ -1,23 +1,46 @@
 let list, currentToken, budget, timeout
-const tripInfo = JSON.parse(localStorage.getItem('adventureTime'))
+const at_ls = JSON.parse(localStorage.getItem('adventureTime'))
+document.querySelector('#bc-location').innerHTML = `<a href="./location.html">${at_ls.location}</a>`
+let category
+switch (at_ls.theme) {
+  case 'restaurant':
+    category = 'Restaurants'
+    break
+  case 'movie_theater':
+    category = 'Movie Theaters'
+    break
+  case 'night_club':
+    category = 'Night Clubs'
+    break
+  case 'amusement_park':
+    category = 'Amusement Parks'
+    break
+  case 'stadium':
+    category = 'Sports'
+    break
+  default:
+    category = 'Category'
+    break
+}
+document.querySelector('#bc-category').innerHTML = `<span class="show-for-sr">Current: </span> ${category}`
 
 const setupPage = _ => {
   timeout = false
   list = []
-  switch (tripInfo.theme) {
+  switch (at_ls.theme) {
     case 'movie_theater':
     case 'amusement_park':
     case 'stadium':
-      budget = tripInfo.activities
+      budget = at_ls.activities
       break
     case 'night_club':
-      budget = tripInfo.nightClub
+      budget = at_ls.nightClub
       break
     case 'restaurant':
-      budget = tripInfo.restaurant
+      budget = at_ls.restaurant
       break
     case 'lodging':
-      budget = tripInfo.hotel
+      budget = at_ls.hotel
       break
     default:
       budget = 4
@@ -56,7 +79,7 @@ const addListItems = d => {
   let accordion = new Foundation.Accordion($('.accordion'))
 }
 
-fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://maps.googleapis.com/maps/api/place/textsearch/json?key=${places_key}&query=${tripInfo.theme}&type=${tripInfo.theme}&radius=8046.72&location=${tripInfo.lat},${tripInfo.lng}&maxprice=${budget}`)}`)
+fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://maps.googleapis.com/maps/api/place/textsearch/json?key=${places_key}&query=${at_ls.theme}&type=${at_ls.theme}&radius=8046.72&location=${at_ls.lat},${at_ls.lng}&maxprice=${budget}`)}`)
   .then(response => {
     if (response.ok) return response.json()
     throw new Error('Network response was not ok.')
@@ -82,7 +105,7 @@ document.querySelector('#list').addEventListener('scroll', e => {
   if (document.querySelector('.last-one').getBoundingClientRect().top < window.innerHeight && !timeout) {
     timeout = true
     setTimeout(_ => timeout = false, 600)
-    fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://maps.googleapis.com/maps/api/place/textsearch/json?key=${places_key}&query=${tripInfo.theme}&type=${tripInfo.theme}&radius=8046.72&location=${tripInfo.lat},${tripInfo.lng}&pagetoken =${currentToken}`)}`)
+    fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://maps.googleapis.com/maps/api/place/textsearch/json?key=${places_key}&query=${at_ls.theme}&type=${at_ls.theme}&radius=8046.72&location=${at_ls.lat},${at_ls.lng}&pagetoken =${currentToken}`)}`)
       .then(response => {
         if (response.ok) return response.json()
         throw new Error('Network response was not ok.')

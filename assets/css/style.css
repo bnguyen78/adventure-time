@@ -97,6 +97,15 @@ label {
   padding: 10px;
 }
 
+.icon-row {
+  display: flex;
+  justify-content: center;
+}
+
+.current-weather {
+  padding: 20px;
+}
+
 #auth-container {
   border: 2px solid white;
   border-radius: 2px;

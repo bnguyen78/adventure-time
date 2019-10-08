@@ -1,3 +1,6 @@
+const at_ls = JSON.parse(localStorage.getItem('adventureTime'))
+document.querySelector('#bc-location').innerHTML = `<a href="./location.html">${at_ls.location}</a>`
+
 document.getElementById('budgetButton').addEventListener('click', e => {
   e.preventDefault()
   console.log(document.getElementById('budgetHotel').value)
@@ -8,7 +11,6 @@ document.getElementById('budgetButton').addEventListener('click', e => {
 
   if (hotel && restaurant && activities && nightClub) {
 
-    let at_ls = JSON.parse(localStorage.getItem('adventureTime'))
     localStorage.setItem('adventureTime', JSON.stringify({
       location: at_ls.location,
       lat: at_ls.lat,

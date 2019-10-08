@@ -21,6 +21,7 @@
           <ul class="breadcrumbs">
             <li id="bc-location"><a href="#">Location</a></li>
             <li id="bc-budget"><a href="#">Budget</a></li>
+            <li><a href="./tile.html">Categories</a></li>
             <li><span class="show-for-sr">Current: </span> Weather</li>
           </ul>
         </li>
@@ -43,8 +44,11 @@
             <div class="cell medium-text-center">
               <h3>Current Weather</h3>
             </div>
-            <div class="cell">
-
+            <div class="cell current-weather">
+              <div class="row icon-row"><canvas id="current-icon" width="256" height="256"></canvas></div>
+              <div id="current-temperature" class="row"></div>
+              <div id="current-humidity" class="row"></div>
+              <div id="current-windSpeed" class="row"></div>
             </div>
           </div>
         </div>
@@ -55,6 +59,7 @@
             <div class="cell medium-text-center">
               <h3>Historical Weather</h3>
             </div>
+            
           </div>
         </div>
       </div>
@@ -69,8 +74,9 @@
   <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-auth.js"></script>
+  <script src="./assets/javascript/skycons.js"></script>
   <script src="./assets/javascript/script.js"></script>
-  <script src="./assets/javascript/tile.js"></script>
+  <script src="./assets/javascript/weather.js"></script>
 </body>
 
 </html>
