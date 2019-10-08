@@ -1,5 +1,3 @@
-const api_key = 'AIzaSyD_d7IeC3P6-D6zxivF0UKXFaDzcUSpLzw'
-
 let list, currentToken, budget, timeout
 const tripInfo = JSON.parse(localStorage.getItem('adventureTime'))
 
@@ -58,29 +56,12 @@ const addListItems = d => {
   let accordion = new Foundation.Accordion($('.accordion'))
 }
 
-fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://maps.googleapis.com/maps/api/place/findplacefromtext/json?key=${api_key}&input=${tripInfo.location}&inputtype=textquery`)}`)
+fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://maps.googleapis.com/maps/api/place/textsearch/json?key=${places_key}&query=${tripInfo.theme}&type=${tripInfo.theme}&radius=8046.72&location=${tripInfo.lat},${tripInfo.lng}&maxprice=${budget}`)}`)
   .then(response => {
     if (response.ok) return response.json()
     throw new Error('Network response was not ok.')
   })
-  .then(data => {
-    fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://maps.googleapis.com/maps/api/place/details/json?key=${api_key}&place_id=${JSON.parse(data.contents).candidates[0].place_id}`)}`)
-      .then(response => {
-        if (response.ok) return response.json()
-        throw new Error('Network response was not ok.')
-      })
-      .then(data => {
-        const location = JSON.parse(data.contents).result.geometry.location
-        fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://maps.googleapis.com/maps/api/place/textsearch/json?key=${api_key}&query=${tripInfo.theme}&type=${tripInfo.theme}&radius=8046.72&location=${location.lat},${location.lng}&maxprice=${budget}`)}`)
-          .then(response => {
-            if (response.ok) return response.json()
-            throw new Error('Network response was not ok.')
-          })
-          .then(data => addListItems(data))
-          .catch(e => console.error(e))
-      })
-      .catch(e => console.error(e))
-  })
+  .then(data => addListItems(data))
   .catch(e => console.error(e))
 
 
@@ -101,7 +82,7 @@ document.querySelector('#list').addEventListener('scroll', e => {
   if (document.querySelector('.last-one').getBoundingClientRect().top < window.innerHeight && !timeout) {
     timeout = true
     setTimeout(_ => timeout = false, 600)
-    fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://maps.googleapis.com/maps/api/place/textsearch/json?key=${api_key}&query=${tripInfo.theme}&type=${tripInfo.theme}&radius=8046.72&location=${location.lat},${location.lng}&pagetoken =${currentToken}`)}`)
+    fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://maps.googleapis.com/maps/api/place/textsearch/json?key=${places_key}&query=${tripInfo.theme}&type=${tripInfo.theme}&radius=8046.72&location=${tripInfo.lat},${tripInfo.lng}&pagetoken =${currentToken}`)}`)
       .then(response => {
         if (response.ok) return response.json()
         throw new Error('Network response was not ok.')

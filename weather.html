@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/foundation.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Adventure Time</title>
+</head>
+
+<body>
+  <!-- NavBar -->
+  <div class="top-bar opaque-background" id="responsive-menu">
+    <div class="top-bar-left opaque-background">
+      <ul class="title-area" style="list-style-type:none">
+        <li id="logo"><a href="./location.html"><img src="./assets/images/Logo.png" alt="logo"></a></li>
+        <li>
+          <ul class="breadcrumbs">
+            <li id="bc-location"><a href="#">Location</a></li>
+            <li id="bc-budget"><a href="#">Budget</a></li>
+            <li><span class="show-for-sr">Current: </span> Weather</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu favorites-area" style="list-style-type:none">
+        <li id="user-name"></li>
+        <li><a id="favorites" href="./favorites.html" class="button">Favorites</a></li>
+        <li><a id="sign-out" href="#" class="alert button">Sign Out</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid-container">
+    <div class="grid-x">
+      <div class="cell small-6 medium-6 large-6">
+        <div class="row row-padding">
+          <div class="grid-y weather-container">
+            <div class="cell medium-text-center">
+              <h3>Current Weather</h3>
+            </div>
+            <div class="cell">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cell small-6 medium-6 large-6">
+        <div class="row row-padding">
+          <div class="grid-y weather-container">
+            <div class="cell medium-text-center">
+              <h3>Historical Weather</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="./assets/javascript/what-input.js"></script>
+  <script src="./assets/javascript/foundation.min.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-auth.js"></script>
+  <script src="./assets/javascript/script.js"></script>
+  <script src="./assets/javascript/tile.js"></script>
+</body>
+
+</html>

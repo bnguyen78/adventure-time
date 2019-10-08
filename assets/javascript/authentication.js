@@ -1,5 +1,5 @@
 firebase.auth().signOut()
-
+document.querySelector('#user-name').innerHTML = ''
 // Initialize the FirebaseUI Widget using Firebase.
 let ui = new firebaseui.auth.AuthUI(firebase.auth())
 

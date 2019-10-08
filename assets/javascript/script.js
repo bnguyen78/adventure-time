@@ -1,5 +1,8 @@
+const places_key = 'AIzaSyD_d7IeC3P6-D6zxivF0UKXFaDzcUSpLzw'
+const weather_key = '293d2af700b3172c991c0eea176c15ac'
+
 // Your web app's Firebase configuration
-var firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyA1VvQndstw_OK8IX6iNE5vT6IU6KIhrwA",
   authDomain: "adventure-time-254203.firebaseapp.com",
   databaseURL: "https://adventure-time-254203.firebaseio.com",
@@ -12,6 +15,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig)
 const db = firebase.firestore()
 
+let locationGeometry
 let displayName
 let uid
 
