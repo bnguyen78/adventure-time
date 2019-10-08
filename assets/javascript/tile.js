@@ -12,4 +12,7 @@ document.querySelector('body').addEventListener('click', e => {
     window.location.href = './list.html'
     
   }
+  if (e.target.className.includes('bg-weather')) {
+    window.location.href = './weather.html'
+  }
 })

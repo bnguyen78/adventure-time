@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="city"></div>
+  <div id="wind"></div>
+  <div id="humidity"></div>
+  <div id="temp"></div>
+
+  <script src="./assets/javascript/locationPage.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+      let at_ls = JSON.parse(localStorage.getItem('adventureTime'))
+    localStorage.setItem('adventureTime', JSON.stringify({
+      location: at_ls.location
+    }))
+console.log(at_ls.location)
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=${at_ls.location}&units=imperial&appid=166a433c57516f51dfab1f7edaed8413`)
+      .then(r => r.json())
+      .then(data => {
+        // space to handle response data
+        console.log(data)
+        document.querySelector('#city').innerHTML = `${data.name} Current Details`
+        document.querySelector('#wind').innerHTML = `Wind speed: ${data.wind.speed}`
+        document.querySelector('#humidity').innerHTML = `Humidity: ${data.main.humidity}`
+        document.querySelector('#temp').innerHTML = `Temperature(F): ${data.main.temp}`
+       })
+      .catch(e => console.log(e))
+
+  </script>
+  
+</body>
+</html>
