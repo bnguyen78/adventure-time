@@ -22,19 +22,14 @@ let uid
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
-    displayName = user.displayName;
-    uid = user.uid;
-    let email = user.email;
-    let emailVerified = user.emailVerified;
-    let photoURL = user.photoURL;
-    let isAnonymous = user.isAnonymous;
-    let providerData = user.providerData;
-    // ...
-    console.log(`uid = ${uid}`)
+    displayName = user.displayName
+    uid = user.uid
+    // let email = user.email
+    // let emailVerified = user.emailVerified
+    // let photoURL = user.photoURL
+    // let isAnonymous = user.isAnonymous
+    // let providerData = user.providerData
     document.querySelector('#user-name').innerHTML = `<b>${displayName}</b>`
-  } else {
-    // User is signed out.
-    // ...
   }
 })
 

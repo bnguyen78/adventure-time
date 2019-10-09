@@ -1,6 +1,8 @@
 const at_ls = JSON.parse(localStorage.getItem('adventureTime'))
 document.querySelector('#bc-location').innerHTML = `<a href="./location.html">${at_ls.location}</a>`
 
+const isMilitaryTime = str => /([01]\d|2[0-3]):[0-5]\d/.test(str)
+
 
 fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://api.darksky.net/forecast/${weather_key}/${at_ls.lat},${at_ls.lng}?exclude=minutely,hourly,daily,alerts,flags`)}`)
   .then(response => {
