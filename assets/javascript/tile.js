@@ -16,4 +16,7 @@ document.querySelector('body').addEventListener('click', e => {
     window.location.href = e.target.dataset.theme === 'weather' ? './weather.html' : './list.html'
     
   }
+  if (e.target.className.includes('bg-weather')) {
+    window.location.href = './weather.html'
+  }
 })
