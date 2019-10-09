@@ -135,7 +135,9 @@ border-radius: 10px;
 .row-padding {
   padding: 10px;
 }
-
+.pointer:hover {
+cursor: pointer;
+}
 .icon-row {
   display: flex;
   justify-content: center;
