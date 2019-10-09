@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="./assets/css/foundation.min.css">
   <link rel="stylesheet" href="./assets/css/fontawesome.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
-
   <title>Adventure Time</title>
 </head>
 
@@ -18,21 +17,15 @@
   <div class="top-bar" id="responsive-menu">
     <div class="top-bar-left">
       <ul class="title-area" style="list-style-type:none" data-responsive-menu="drilldown medium-dropdown">
-          <li id="logo"><a href="./location.html"><img src="./assets/images/Logo.png" alt="logo"></a></li>
-          <li>
-            <ul class="breadcrumbs">
-              <li id="bc-location"><a href="./location.html">Location</a></li>
-              <li><a href="./budget.html">Budget</a></li>
-              <li><a href="./tile.html">Categories</a></li>
-              <li id="bc-category"><span class="show-for-sr">Current: </span> Category</li>
-            </ul>
-          </li>
+        <li id="logo">
+          <a href="./location.html"><img src="assets/images/Logo.png" alt="logo"></a>
+        </li>
       </ul>
     </div>
     <div class="top-bar-right">
       <ul class="menu favorites-area" style="list-style-type:none">
         <li id="user-name"></li>
-        <li><a id="favorites" href="./favorites.html" class="button">Favorites</a></li>
+        <li><a id="favorites" href="#" class="button">Favorites</a></li>
         <li><a id="sign-out" href="#" class="alert button">Sign Out</a></li>
       </ul>
     </div>
@@ -50,7 +43,7 @@
         </div>
       </div>
       <div class="row">
-        <ul id="list" class="accordion" style="list-style-type:none;" data-allow-all-closed="true">
+        <ul id="favorites-list" class="accordion" style="list-style-type:none;" data-allow-all-closed="true">
         </ul>
       </div>
     </div>
@@ -65,7 +58,7 @@
   <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-auth.js"></script>
   <script src="./assets/javascript/script.js"></script>
-  <script src="./assets/javascript/list.js"></script>
+  <script src="./assets/javascript/favorites.js"></script>
 </body>
 
 </html>

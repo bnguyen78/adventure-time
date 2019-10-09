@@ -1,3 +1,6 @@
+const at_ls = JSON.parse(localStorage.getItem('adventureTime'))
+document.querySelector('#bc-location').innerHTML = `<a href="./location.html">${at_ls.location}</a>`
+
 document.getElementById('budgetButton').addEventListener('click', e => {
   e.preventDefault()
   console.log(document.getElementById('budgetHotel').value)
@@ -8,20 +11,16 @@ document.getElementById('budgetButton').addEventListener('click', e => {
 
   if (hotel && restaurant && activities && nightClub) {
 
-    let at_ls = JSON.parse(localStorage.getItem('adventureTime'))
     localStorage.setItem('adventureTime', JSON.stringify({
       location: at_ls.location,
+      lat: at_ls.lat,
+      lng: at_ls.lng,
       hotel: hotel,
       restaurant: restaurant,
       activities: activities,
       nightClub: nightClub,
       theme: ''
     }))
-      window.location.href = './tile.html'
-    }
-  })
-
-//only move to next page if all slots are filled out
-
-
-// console.log(hotelBudget)
+    window.location.href = './tile.html'
+  }
+})
