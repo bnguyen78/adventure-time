@@ -31,12 +31,14 @@ label {
 background: url('../images/hotels.jpg') no-repeat center;
 background-size: cover;
 
+border-radius: 10px;
 }
 
 .bg-nightclub {
   background: url('../images/nightclubs.jpg') no-repeat;
   background-size: cover;
 
+  border-radius: 10px;
 }
 
 .bg-sports {
@@ -44,13 +46,15 @@ background-size: cover;
   /* background-repeat: no-repeat; */
   background-size: cover;
   /* background-size: 100% 100% */
-  
+ 
+  border-radius: 10px;
 }
 
 .bg-history {
   background: url('../images/amusement_park.jpg')no-repeat center center;
   background-size: cover;
-  
+ 
+  border-radius: 10px;
 
 }
 /* added blur effect */
@@ -84,18 +88,21 @@ background-size: cover;
 
 .bg-weather {
   background: url('../images/weather.png') center;
+  border-radius: 10px;
 }
 
 .bg-entertainment {
   background: url('../images/movie-theater.jpg')no-repeat center center;
   background-size: cover;
   
+  border-radius: 10px;
 
 }
 
 .bg-restaurant {
   background: url('../images/restaurant.jpg');
   
+  border-radius: 10px;
 
 }
 
