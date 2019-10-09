@@ -59,7 +59,20 @@
             <div class="cell medium-text-center">
               <h3>Historical Weather</h3>
             </div>
-            
+            <div class="row current-weather">
+              <div class="input-group">
+                <input class="input-group-field" type="date">
+                <div class="input-group-button">
+                  <input id="weather-search" type="submit" class="button" value="Search">
+                </div>
+              </div>
+            </div>
+            <div class="cell current-weather">
+              <div class="row icon-row"><canvas id="current-icon" width="256" height="256"></canvas></div>
+              <div id="current-temperature" class="row"></div>
+              <div id="current-humidity" class="row"></div>
+              <div id="current-windSpeed" class="row"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -75,6 +88,7 @@
   <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-auth.js"></script>
   <script src="./assets/javascript/skycons.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="./assets/javascript/script.js"></script>
   <script src="./assets/javascript/weather.js"></script>
 </body>
