@@ -58,19 +58,19 @@
             <div class="cell medium-text-center">
               <h3>Historical Weather</h3>
             </div>
-            <div class="row current-weather">
+            <div id="weather-form" class="row historical-weather">
               <div class="input-group">
-                <input class="input-group-field" type="date">
+                <input id="date-input" class="input-group-field" type="date">
                 <div class="input-group-button">
                   <input id="weather-search" type="submit" class="button" value="Search">
                 </div>
               </div>
             </div>
-            <div class="cell current-weather">
-              <div class="row icon-row"><canvas id="current-icon" width="256" height="256"></canvas></div>
-              <div id="current-temperature" class="row"></div>
-              <div id="current-humidity" class="row"></div>
-              <div id="current-windSpeed" class="row"></div>
+            <div class="cell historical-weather">
+              <div class="row icon-row"><canvas id="historical-icon" width="256" height="256"></canvas></div>
+              <div id="historical-temperature" class="row"></div>
+              <div id="historical-humidity" class="row"></div>
+              <div id="historical-windSpeed" class="row"></div>
             </div>
           </div>
         </div>

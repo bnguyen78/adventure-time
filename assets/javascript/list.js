@@ -105,7 +105,7 @@ document.querySelector('#list').addEventListener('scroll', e => {
   if (document.querySelector('.last-one').getBoundingClientRect().top < window.innerHeight && !timeout) {
     timeout = true
     setTimeout(_ => timeout = false, 600)
-    fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://maps.googleapis.com/maps/api/place/textsearch/json?key=${places_key}&query=${at_ls.theme}&type=${at_ls.theme}&radius=8046.72&location=${at_ls.lat},${at_ls.lng}&pagetoken =${currentToken}`)}`)
+    fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://maps.googleapis.com/maps/api/place/textsearch/json?key=${places_key}&pagetoken=${currentToken}`)}`)
       .then(response => {
         if (response.ok) return response.json()
         throw new Error('Network response was not ok.')
