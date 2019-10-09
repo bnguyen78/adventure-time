@@ -7,9 +7,19 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/foundation.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Adventure Time</title>
 </head>
+
+<style>
+  label {
+    font-family: 'Bitter', serif;
+    color: black;
+    text-align: center;
+    font-size: 18px;
+  }
+</style>
 
 <body>
 
@@ -37,21 +47,22 @@
 
   <div class="budget" id="budgetID">
     <form>
-      <label>Hotel Budget</label>
+      <label><b>Hotel Budget</b></label>
       <input class="input" name="hotelBudget" id="budgetHotel" type="number" placeholder="Budget for Hotel">
 
-      <label>Food Budget (1-cheapest, 4-expensive)</label>
+      <label><b>Food Budget</b></label>
       <input class="input" name="restaurantBudget" id="budgetRestaurant" type="number"
         placeholder="Budget for Restaurants">
 
-      <label>Activities Budget</label>
+      <label><b>Activities Budget</b></label>
       <input class="input" name="activitiesBudget" id="budgetActivities" type="number"
         placeholder="Budget for Activities">
 
-      <label>Night Club Budget:</label>
+      <label><b>Night Club Budget</b></label>
       <input class="input" name="nightClubBudget" id="budgetNightClub" type="number" placeholder="Budget for Clubbing">
+      <label><b>1 for cheapest, 4 for expensive</b></label>
     </form>
-    <a class="button success" id="budgetButton" href="#">SPEND MONEY</a>
+    <a class="button success" id="budgetButton" href="#"><b>SPEND MONEY</b></a>
   </div>
 
 
