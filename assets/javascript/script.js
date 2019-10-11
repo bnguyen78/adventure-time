@@ -15,9 +15,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig)
 const db = firebase.firestore()
 
-let locationGeometry
-let displayName
-let uid
+let locationGeometry, displayName, uid
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
@@ -38,7 +36,7 @@ document.querySelector('body').addEventListener('click', e => {
     firebase.auth().signOut()
     displayName = ''
     uid = ''
-    window.location.href = '../../index.html'
+    window.location.href = './index.html'
   }
 })
 

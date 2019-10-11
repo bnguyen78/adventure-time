@@ -6,7 +6,7 @@ let ui = new firebaseui.auth.AuthUI(firebase.auth())
 const uiConfig = {
   // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
   signInFlow: 'popup',
-  signInSuccessUrl: 'https://bnguyen78.github.io/adventure-time/location.html',
+  signInSuccessUrl: './location.html',
   signInOptions: [
     // Leave the lines as is for the providers you want to offer your users.
     firebase.auth.GoogleAuthProvider.PROVIDER_ID
