@@ -1,4 +1,4 @@
-const places_key = 'AIzaSyD_d7IeC3P6-D6zxivF0UKXFaDzcUSpLzw'
+const places_key = 'AIzaSyDX32zpm7Pk5Sf0Nl3n5DggB_Cr0DiX2IE'
 const weather_key = '293d2af700b3172c991c0eea176c15ac'
 
 // Your web app's Firebase configuration
