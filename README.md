@@ -15,7 +15,7 @@ Manage your travel budget and plan things to do with Adventure Time. Travelers w
 https://bnguyen78.github.io/adventure-time/
 
 
-<img src="/assets/adventureLocation.PNG" width="250" height="400"><img src="/assets/adventuresaved.PNG" width="250" height="400">
+<img src="/assets/images/adventureLocation.PNG" width="250" height="400"><img src="/assets/images/adventuresaved.PNG" width="250" height="400">
 
 ====
 
