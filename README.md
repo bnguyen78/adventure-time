@@ -10,7 +10,7 @@ Manage your travel budget and plan things to do with Adventure Time. Travelers w
 5. Following page will let you search between different categories you would look up when traveling
 6. After choosing one, you can save it and it will be saved to your account for future reference.
 
-### Live Deployed
+## Live Deployed
 
 https://bnguyen78.github.io/adventure-time/
 
@@ -19,7 +19,7 @@ https://bnguyen78.github.io/adventure-time/
 
 ====
 
-### Technologies Used
+## Technologies Used
 
 * React - A javascript library for building user interfaces
 * MongoDb - document oriented NoSQL database used used for high volume data storage.
